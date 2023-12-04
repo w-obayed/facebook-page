@@ -7,22 +7,22 @@
 
   .fb-auth-container {
     width: 977px;
-
     display: flex;
     justify-content: space-between;
-    align-items: center;
 
     .fb-auth-left {
+      margin-top: 25px;
       img {
         width: 310px;
         transform: translate(-27px, 10px);
       }
 
       h2 {
-        font-weight: 500;
-        font-size: 28px;
+        font-weight: 400;
+        font-size: 25px;
         line-height: 32px;
-        width: 85%;
+        width: 90%;
+        color: #111;
       }
     }
 

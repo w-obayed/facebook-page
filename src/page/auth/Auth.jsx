@@ -1,11 +1,28 @@
 import { Link } from "react-router-dom";
 import Meta from "../../components/meta/Meta";
 import "./Auth.scss";
+import Modal from "../../components/modal/Modal";
+import { useState } from "react";
 
 const Auth = () => {
+  const [modal, setModal] = useState(false);
+
   return (
     <>
       <Meta title="facebook - login or signup" />
+      {modal && (
+        <Modal hide={setModal}>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+          distinctio delectus rerum, ex facere quam. Lorem ipsum dolor sit, amet
+          consectetur adipisicing elit. Quasi excepturi sequi praesentium quas
+          nam pariatur blanditiis reprehenderit hic repudiandae quis sunt fuga,
+          cumque eum numquam dolorem, eligendi, quos id quibusdam. Reprehenderit
+          dignissimos, asperiores, animi neque error quisquam soluta ducimus
+          facere illo consequuntur sequi vel quo quos, enim cumque
+          necessitatibus nesciunt.
+        </Modal>
+      )}
+
       <div className="fb-auth-area">
         <div className="fb-auth-container">
           <div className="fb-auth-left">
@@ -29,7 +46,9 @@ const Auth = () => {
               </form>
               <Link to="/">Forgotten password?</Link>
               <div className="divider"></div>
-              <button className="create-btn">Create new account</button>
+              <button className="create-btn" onClick={() => setModal(true)}>
+                Create new account
+              </button>
             </div>
             <p className="lg-text">
               <Link>Create a Page</Link> for a celebrity, brand or business.

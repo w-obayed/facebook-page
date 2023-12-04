@@ -1,0 +1,47 @@
+.modal-area {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.8)
+  );
+  position: fixed;
+  z-index: 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .modal-container {
+    width: 430px;
+    background-color: #fff;
+    box-shadow: var(--fb-shadow);
+    border-radius: 10px;
+
+    .modal-header {
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .header-content {
+        h2 {
+          font-weight: 500;
+          font-size: 32px;
+        }
+        p {
+          font-size: 15px;
+          color: #606770;
+        }
+      }
+      button {
+        font-size: 20px;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+      }
+    }
+    .modal-body {
+      padding: 15px;
+    }
+  }
+}
